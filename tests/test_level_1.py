@@ -14,7 +14,7 @@ import os
 import signal
 
 EXE_NAME = "tictactoe.exe"
-ACTIVATION_ARGS = ["123456", "activate", "gogogo"]
+ACTIVATION_ARGS = ["123456", "gogogo", "activate"]
 PORT = 6496
 HOST = "127.0.0.1"
 TEST_COMMAND = b"file open file.txt\n"

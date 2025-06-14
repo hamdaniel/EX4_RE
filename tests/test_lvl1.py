@@ -260,7 +260,7 @@ def test_normal_game_draw():
 def main():
     """Run all Level 1 tests."""
     #print("[DEBUG] Starting Level 1 Automated Test Suite...")
-    print("=" * 60)
+    
     
     # Check if executable exists
     if not os.path.exists(EXE_NAME):
@@ -271,44 +271,42 @@ def main():
     total_tests = 4
     
     # Test 1: Normal behavior (no TCP server)
-    print("\n[TEST 1/4] Normal behavior test...")
+    print("\n[TEST 1/4]")
     if test_normal_behavior():
         tests_passed += 1
-        print("✓ PASSED: No TCP server without activation args")
+        print("PASSED: No TCP server without activation args")
     else:
-        print("✗ FAILED: TCP server is active without proper args!")
+        print("FAILED: TCP server is active without proper args!")
         sys.exit(1)
     
     # Test 2: X wins scenario
-    print("\n[TEST 2/4] X wins game logic test...")
+    print("\n[TEST 2/4]")
     if test_normal_game_x_wins():
         tests_passed += 1
-        print("✓ PASSED: X wins scenario works correctly")
+        print("PASSED: X wins scenario works correctly")
     else:
-        print("✗ FAILED: X wins test failed!")
+        print("FAILED: X wins test failed!")
         sys.exit(1)
     
     # Test 3: Draw scenario
-    print("\n[TEST 3/4] Draw game logic test...")
+    print("\n[TEST 3/4]")
     if test_normal_game_draw():
         tests_passed += 1
-        print("✓ PASSED: Draw scenario works correctly")
+        print("PASSED: Draw scenario works correctly")
     else:
-        print("✗ FAILED: Draw test failed!")
+        print("FAILED: Draw test failed!")
         sys.exit(1)
     
     # Test 4: Backdoor activation
-    print("\n[TEST 4/4] Backdoor activation test...")
+    print("\n[TEST 4/4]")
     if test_backdoor_activation():
         tests_passed += 1
-        print("✓ PASSED: Backdoor activation works correctly")
+        print("PASSED: Backdoor activation works correctly")
     else:
-        print("✗ FAILED: Backdoor activation test failed!")
+        print("FAILED: Backdoor activation test failed!")
         sys.exit(1)
     
-    print("\n" + "=" * 60)
-    print(f"[RESULT] All {tests_passed}/{total_tests} Level 1 tests PASSED! 🎉")
-    print("level 1 passed: All tests completed successfully!")
+    print("\nlevel 1 passed!")
 
 
 if __name__ == "__main__":

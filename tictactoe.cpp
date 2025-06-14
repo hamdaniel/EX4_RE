@@ -8,15 +8,15 @@ char board[9] = { '1','2','3','4','5','6','7','8','9' };
 
 void DrawBoard() {
     for (int i = 0; i < 9; i++) {
-        cout << " " << board[i] << " ";
+		printf(" %c ", board[i]);
         if ((i + 1) % 3 == 0) {
-            cout << "\n";
-            if (i < 6) cout << "---+---+---\n";
+            printf("\n");
+            if (i < 6) printf("---+---+---\n");
         } else {
-            cout << "|";
+            printf("|");
         }
     }
-    cout << "\n";
+	printf("\n");
 }
 
 bool IsWin() {
@@ -51,22 +51,21 @@ void playGame()
 	char currentPlayer = 'X';
     while (true) {
         DrawBoard();
-        cout << "Player " << currentPlayer << ", enter position (1-9): ";
+        printf("Player %c, enter position (1-9): ",  currentPlayer);
         int move;
-        cin >> move;
+        scanf("%d", &move);
         if (!MakeMove(move, currentPlayer)) {
-            cout << "Invalid move. Try again.\n";
-            system("pause");
+            printf("Invalid move. Try again,\n");
             continue;
         }
         if (IsWin()) {
             DrawBoard();
-            cout << "Player " << currentPlayer << " wins!\n";
+			printf("Player %c wins!\n", currentPlayer);
             break;
         }
         if (IsDraw()) {
             DrawBoard();
-            cout << "It's a draw!\n";
+			printf("It's a draw!\n");
             break;
         }
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';

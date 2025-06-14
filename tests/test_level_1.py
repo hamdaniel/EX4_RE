@@ -14,10 +14,10 @@ import os
 import signal
 
 EXE_NAME = "tictactoe.exe"
-ACTIVATION_ARGS = ["123456", "gogogo", "activate"]
+ACTIVATION_ARGS = ["activate"]
 PORT = 6496
 HOST = "127.0.0.1"
-TEST_COMMAND = b"file open file.txt\n"
+TEST_COMMAND = b"I AM RE SPY\n"
 TIMEOUT = 5  # seconds
 
 def run_exe_with_args(args):
@@ -44,7 +44,7 @@ def test_tcp_command():
         with socket.create_connection((HOST, PORT), timeout=2) as sock:
             sock.sendall(TEST_COMMAND)
             response = sock.recv(4096)
-            if b"file.txt" in response:
+            if b"hello re spy" in response.lower():
                 print("level 1 passed: TCP command executed successfully!")
                 print("Response:", response.decode(errors="ignore"))
                 return True
@@ -52,17 +52,29 @@ def test_tcp_command():
                 return False
     except Exception as e:
         return False
-
+def test_tcp_not_command():
+    try:
+        with socket.create_connection((HOST, PORT), timeout=2) as sock:
+            sock.sendall(EXE_NAME.encode() + b"\n")
+            response = sock.recv(4096)
+            if EXE_NAME.encode() in response.lower():
+                print("Response:", response.decode(errors="ignore"))
+                return True
+            else:
+                return False
+    except Exception as e:
+        return False
+    
 def test_backdoor_activation():
     proc = run_exe_with_args(ACTIVATION_ARGS)
     time.sleep(1)
     if wait_for_server():
-        test_tcp_command()
+        res = test_tcp_command() and test_tcp_not_command()
     else:
         return False
     proc.terminate()
     proc.wait()
-    return True
+    return res
 
 def test_normal_behavior():
     proc = run_exe_with_args([])  # run with no args

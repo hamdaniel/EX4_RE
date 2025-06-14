@@ -2,21 +2,18 @@ import pefile
 
 # === Configuration ===
 exe_path = "tictactoe.exe"  # <- Path to the EXE to check
-network_functions = [
-    "WSAStartup",
-    "WSACleanup",
-    "socket",
-    "bind",
-    "listen",
-    "accept",
-    "recv",
-    "send",
-    "closesocket",
-    "htons",
-    "WSAGetLastError"
+network_dlls = [
+    "ws2_32.dll",
+    "wininet.dll",
+    "winhttp.dll",
+    "dnsapi.dll",
+    "iphlpapi.dll",
+    "urlmon.dll",
+    "netapi32.dll",
+    "rasapi32.dll"
 ]
 
-def check_imports(exe_path, function_list):
+def check_network_dll_imports(exe_path, dll_list):
     try:
         pe = pefile.PE(exe_path)
     except Exception as e:
@@ -24,24 +21,19 @@ def check_imports(exe_path, function_list):
         return
 
     if not hasattr(pe, 'DIRECTORY_ENTRY_IMPORT'):
+        print("No import table found.")
         return
 
-    found = set()
+    imported_dlls = [entry.dll.decode(errors='ignore').lower() for entry in pe.DIRECTORY_ENTRY_IMPORT]
+
+    found = [dll for dll in imported_dlls if dll in dll_list]
 
     print("[TEST 1/1]")
 
-    for entry in pe.DIRECTORY_ENTRY_IMPORT:
-        dll_name = entry.dll.decode(errors='ignore').lower()
-        for imp in entry.imports:
-            if imp.name:
-                func_name = imp.name.decode(errors='ignore')
-                if func_name in function_list:
-                    found.add(func_name)
-
     if found:
-        print(f"Level 2 failed. found suspicious functions: {', '.join(found)}")
+        print(f"\nLevel 2 failed. found suspicious network DLLs: {', '.join(found)}\n")
     else:
-        print("Level 2 passed!")
+        print("\nLevel 2 passed!\n")
 
 if __name__ == "__main__":
-    check_imports(exe_path, network_functions)
+    check_network_dll_imports(exe_path, network_dlls)

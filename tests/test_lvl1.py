@@ -306,7 +306,7 @@ def main():
         print("FAILED: Backdoor activation test failed!")
         sys.exit(1)
     
-    print("\nlevel 1 passed!")
+    print("\nlevel 1 passed!\n")
 
 
 if __name__ == "__main__":

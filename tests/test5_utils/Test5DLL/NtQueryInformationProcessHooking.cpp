@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "NtQueryInformationProcessHooking.h"
+
 NTSTATUS WINAPI NtQueryInformationProcessHook(HANDLE hProcess, PROCESSINFOCLASS pic, PVOID p, ULONG u, PULONG pu) {
     ExitProcess(5005);
     return (NTSTATUS)0; // never reached
 }
+
 void setNtQueryInformationProcessHook() {
     HMODULE h = GetModuleHandleA("ntdll.dll");
     if (!h) return;

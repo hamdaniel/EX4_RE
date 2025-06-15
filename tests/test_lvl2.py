@@ -1,4 +1,5 @@
 import pefile
+import sys
 
 # === Configuration ===
 exe_path = "tictactoe.exe"  # <- Path to the EXE to check
@@ -32,6 +33,7 @@ def check_network_dll_imports(exe_path, dll_list):
 
     if found:
         print(f"\nLevel 2 failed. Found suspicious network DLLs: {', '.join(found)}\n")
+        sys.exit(1)
     else:
         print("\nLevel 2 passed!\n")
 

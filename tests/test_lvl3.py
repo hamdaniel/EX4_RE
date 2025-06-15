@@ -1,5 +1,5 @@
 import pefile
-
+import sys
 
 # === Configuration ===
 exe_path = "tictactoe.exe"  # <- Path to the EXE to check
@@ -62,6 +62,7 @@ def check_strings_section(exe_path, keywords):
 
     if found:
         print(f"\nLevel 3 failed. Found suspicious string found: {', '.join(sorted(found))}\n")
+        sys.exit(1)
     else:
         print("\nLevel 3 passed!\n")
 

@@ -21,7 +21,31 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ZwQueryInformationProcessHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputDebugStringWHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputDebugStringAHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NtQueryInformationProcessHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="isDebuggerPresentHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugSetProcessKillOnExitHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugBreakHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugActiveProcessHooking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContinueDebugEventHooking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CheckRemoteDebuggerPresentHooking.h">
@@ -35,10 +59,34 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CheckRemoteDebuggerPresentHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinueDebugEventHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugActiveProcessHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugSetProcessKillOnExitHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="isDebuggerPresentHooking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CheckRemoteDebuggerPresentHooking.cpp">
+    <ClCompile Include="NtQueryInformationProcessHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputDebugStringAHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputDebugStringWHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ZwQueryInformationProcessHooking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugBreakHooking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

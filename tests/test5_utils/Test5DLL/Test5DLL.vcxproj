@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f77e8db8-c2d0-4aa9-9704-912853aa6995}</ProjectGuid>
+    <ProjectGuid>{ece2f448-8038-4e48-9dc9-e51d05395f45}</ProjectGuid>
     <RootNamespace>Test5DLL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -140,20 +140,36 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CheckRemoteDebuggerPresentHooking.h" />
+    <ClInclude Include="ContinueDebugEventHooking.h" />
+    <ClInclude Include="DebugActiveProcessHooking.h" />
+    <ClInclude Include="DebugBreakHooking.h" />
+    <ClInclude Include="DebugSetProcessKillOnExitHooking.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="isDebuggerPresentHooking.h" />
+    <ClInclude Include="NtQueryInformationProcessHooking.h" />
+    <ClInclude Include="OutputDebugStringAHooking.h" />
+    <ClInclude Include="OutputDebugStringWHooking.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ZwQueryInformationProcessHooking.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CheckRemoteDebuggerPresentHooking.cpp" />
+    <ClCompile Include="ContinueDebugEventHooking.cpp" />
+    <ClCompile Include="DebugActiveProcessHooking.cpp" />
+    <ClCompile Include="DebugBreakHooking.cpp" />
+    <ClCompile Include="DebugSetProcessKillOnExitHooking.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="isDebuggerPresentHooking.cpp" />
+    <ClCompile Include="NtQueryInformationProcessHooking.cpp" />
+    <ClCompile Include="OutputDebugStringAHooking.cpp" />
+    <ClCompile Include="OutputDebugStringWHooking.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ZwQueryInformationProcessHooking.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

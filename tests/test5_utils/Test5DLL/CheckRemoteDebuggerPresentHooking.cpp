@@ -1,12 +1,10 @@
 #include "pch.h"
 #include "CheckRemoteDebuggerPresentHooking.h"
 
-
 BOOL WINAPI checkRemoteDebuggerPresentHook(HANDLE hProcess, PBOOL pbDebuggerPresent) {
     ExitProcess(5002);
     return FALSE; // never reached
 }
-
 
 void setCheckRemoteDebuggerPresentHook() {
     HMODULE h = GetModuleHandleA("kernel32.dll");

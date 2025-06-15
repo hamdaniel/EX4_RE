@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|solutionrelative:dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|solutionrelative:CheckRemoteDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\ContinueDebugEventHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:ContinueDebugEventHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77E8DB8-C2D0-4AA9-9704-912853AA6995}|Test5DLL.vcxproj|solutionrelative:isDebuggerPresentHooking.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:isDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\NtQueryInformationProcessHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:NtQueryInformationProcessHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugSetProcessKillOnExitHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:DebugSetProcessKillOnExitHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugActiveProcessHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:DebugActiveProcessHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{ECE2F448-8038-4E48-9DC9-E51D05395F45}|Test5DLL.vcxproj|solutionrelative:CheckRemoteDebuggerPresentHooking.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "isDebuggerPresentHooking.h",
-              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.h",
-              "RelativeDocumentMoniker": "isDebuggerPresentHooking.h",
-              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.h",
-              "RelativeToolTip": "isDebuggerPresentHooking.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T16:04:34.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CheckRemoteDebuggerPresentHooking.cpp",
-              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp",
-              "RelativeDocumentMoniker": "CheckRemoteDebuggerPresentHooking.cpp",
-              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp",
-              "RelativeToolTip": "CheckRemoteDebuggerPresentHooking.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-15T16:03:42.793Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -56,9 +48,87 @@
               "RelativeDocumentMoniker": "dllmain.cpp",
               "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\dllmain.cpp",
               "RelativeToolTip": "dllmain.cpp",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-15T11:20:03.319Z",
+              "WhenOpened": "2025-06-15T19:28:10.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NtQueryInformationProcessHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\NtQueryInformationProcessHooking.cpp",
+              "RelativeDocumentMoniker": "NtQueryInformationProcessHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\NtQueryInformationProcessHooking.cpp",
+              "RelativeToolTip": "NtQueryInformationProcessHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:31:39.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "isDebuggerPresentHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.cpp",
+              "RelativeDocumentMoniker": "isDebuggerPresentHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\isDebuggerPresentHooking.cpp",
+              "RelativeToolTip": "isDebuggerPresentHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:31:36.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DebugSetProcessKillOnExitHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugSetProcessKillOnExitHooking.cpp",
+              "RelativeDocumentMoniker": "DebugSetProcessKillOnExitHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugSetProcessKillOnExitHooking.cpp",
+              "RelativeToolTip": "DebugSetProcessKillOnExitHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:31:30.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DebugActiveProcessHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugActiveProcessHooking.cpp",
+              "RelativeDocumentMoniker": "DebugActiveProcessHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\DebugActiveProcessHooking.cpp",
+              "RelativeToolTip": "DebugActiveProcessHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:31:15.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckRemoteDebuggerPresentHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp",
+              "RelativeDocumentMoniker": "CheckRemoteDebuggerPresentHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\CheckRemoteDebuggerPresentHooking.cpp",
+              "RelativeToolTip": "CheckRemoteDebuggerPresentHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:30:58.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContinueDebugEventHooking.cpp",
+              "DocumentMoniker": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\ContinueDebugEventHooking.cpp",
+              "RelativeDocumentMoniker": "ContinueDebugEventHooking.cpp",
+              "ToolTip": "C:\\Users\\Daniel\\OneDrive\\Documents\\Technion\\Semester_#8\\Reverse\\ex4\\EX4_RE\\tests\\test5_utils\\Test5DLL\\ContinueDebugEventHooking.cpp",
+              "RelativeToolTip": "ContinueDebugEventHooking.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:30:33.354Z",
               "EditorCaption": ""
             }
           ]

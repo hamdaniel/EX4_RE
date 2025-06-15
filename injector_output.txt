@@ -1,0 +1,6 @@
+[STDOUT]
+Process created successfully with PID: 48564
+Injected DLL successfully
+Injected process exited with code: 5001
+
+[STDERR]

@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "DebugSetProcessKillOnExitHooking.h"
+
 BOOL WINAPI DebugSetProcessKillOnExitHook(BOOL KillOnExit) {
     ExitProcess(5009);
     return FALSE; // never reached
 }
+
 void setDebugSetProcessKillOnExitHook() {
     HMODULE h = GetModuleHandleA("kernel32.dll");
     if (!h) return;

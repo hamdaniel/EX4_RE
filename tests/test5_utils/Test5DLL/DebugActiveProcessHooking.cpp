@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "DebugActiveProcessHooking.h"
+
 BOOL WINAPI DebugActiveProcessHook(DWORD dwProcessId) {
     ExitProcess(5007);
     return FALSE; // never reached
 }
+
 void setDebugActiveProcessHook() {
     HMODULE h = GetModuleHandleA("kernel32.dll");
     if (!h) return;

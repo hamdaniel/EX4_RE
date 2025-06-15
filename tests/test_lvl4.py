@@ -50,6 +50,7 @@ def open_ports_test(pid):
             time.sleep(1)  # Wait before retrying
     except subprocess.CalledProcessError as e:
         print(f"[ERROR] netstat failed: {e}")
+
     return True # Passed test
 
 def normal_game_behavior_test(gdb_proc):
@@ -88,7 +89,6 @@ def main():
         return
 
 
-    failed_tests = False
 
     print("\n[TEST 1/2]")
     if open_ports_test(tictactoe_proc.pid):
@@ -96,18 +96,29 @@ def main():
 
     else:
         print("FAILED: Debugger detected suspicious activity.")
-        failed_tests = True
+        try:
+            tictactoe_proc.kill()
+            tictactoe_proc.wait()
+        except Exception as e:
+            pass
+        sys.exit(1)
 
-    if not failed_tests:
-        print("\n[TEST 2/2]")
-        if normal_game_behavior_test(gdb_proc):
-            print("PASSED: Expected game behavior")
+    print("\n[TEST 2/2]")
+    if normal_game_behavior_test(gdb_proc):
+        print("PASSED: Expected game behavior")
 
-        else:
-            print("FAILED: Game behaves unexpectedly.")
-            failed_tests = True
-    if not failed_tests:
-        print("\nLevel 4 passed!\n")
+    else:
+        print("FAILED: Game behaves unexpectedly.")
+        try:
+            tictactoe_proc.kill()
+            tictactoe_proc.wait()
+        except Exception as e:
+            pass
+            
+        sys.exit(1)
+    
+    print("\nLevel 4 passed!\n")
+    
 
     # print("[DEBUG] Sending 'quit' command to gdb stdin")
     try:

@@ -13,8 +13,14 @@
 
 #include "isDebuggerPresentHooking.h"
 #include "CheckRemoteDebuggerPresentHooking.h"
-
-
+#include "OutputDebugStringAHooking.h"
+#include "OutputDebugStringWHooking.h"
+#include "NtQueryInformationProcessHooking.h"
+#include "ZwQueryInformationProcessHooking.h"
+#include "DebugActiveProcessHooking.h"
+#include "DebugBreakHooking.h"
+#include "DebugSetProcessKillOnExitHooking.h"
+#include "ContinueDebugEventHooking.h"
 
 void set_being_debugged_flag()
 {
@@ -35,6 +41,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
         set_being_debugged_flag(); // make process think it is debugged
         setIsDebuggerPresentHook();
         setCheckRemoteDebuggerPresentHook();
+        setOutputDebugStringAHook();
+        setOutputDebugStringWHook();
+        setNtQueryInformationProcessHook();
+        setZwQueryInformationProcessHook();
+        setDebugActiveProcessHook();
+        setDebugBreakHook();
+        setDebugSetProcessKillOnExitHook();
+        setContinueDebugEventHook();
     }
     return TRUE;
 }

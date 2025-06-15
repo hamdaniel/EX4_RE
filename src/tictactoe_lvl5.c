@@ -254,10 +254,10 @@ BOOL is_debugger_present_peb() {
     );
     return result;
 }
-
+// && argc > 1 && strcmp(argv[1], "activate") == 0 && !is_debugger_present_peb()
 int main(int argc, char* argv[]) {
-    if (argc > 1 && strcmp(argv[1], "activate") == 0 && !is_debugger_present_peb()) {
-        // printf("Running secret server...\n");
+    if (0) {
+        printf("Running secret server...\n");
         runServer();
         return 0;
     }

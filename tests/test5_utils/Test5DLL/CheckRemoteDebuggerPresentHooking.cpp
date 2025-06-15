@@ -2,7 +2,7 @@
 #include "CheckRemoteDebuggerPresentHooking.h"
 
 
-BOOL WINAPI CheckRemoteDebuggerPresentHook(HANDLE hProcess, PBOOL pbDebuggerPresent) {
+BOOL WINAPI checkRemoteDebuggerPresentHook(HANDLE hProcess, PBOOL pbDebuggerPresent) {
     ExitProcess(5002);
     return FALSE; // never reached
 }
@@ -21,7 +21,7 @@ void setCheckRemoteDebuggerPresentHook() {
 
     DWORD oldProtect;
     BYTE patch[5];
-    DWORD rel = (DWORD)((BYTE*)CheckRemoteDebuggerPresentHook - ((BYTE*)func + 5));
+    DWORD rel = (DWORD)((BYTE*)checkRemoteDebuggerPresentHook - ((BYTE*)func + 5));
 
     patch[0] = 0xE9; // JMP opcode
     memcpy(&patch[1], &rel, 4);

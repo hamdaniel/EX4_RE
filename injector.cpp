@@ -45,13 +45,16 @@ int main(int argc, char** argv)
     // Create child process
     DLL_PATH = (LPSTR)"Test5DLL.dll";
     LPSTR exePath = (LPSTR)"tictactoe.exe";
-    LPSTR cmdLine = (LPSTR)"tictactoe.exe";
+    LPSTR cmdLine = (LPSTR)"tictactoe.exe activate";
 
-    if (!CreateProcessA(exePath, cmdLine, NULL, NULL, TRUE, CREATE_SUSPENDED, NULL, NULL, &siStartInfo, &pi)) {
+    DWORD creationFlags = CREATE_SUSPENDED;
+
+    if (!CreateProcessA(exePath, cmdLine, NULL, NULL, TRUE, creationFlags, NULL, NULL, &siStartInfo, &pi)) {
         printf("Couldn't open process %s\n", exePath);
         return 1;
     }
-
+    printf("Process created successfully with PID: %lu\n", pi.dwProcessId);
+    
     // Close unneeded handles in parent
     CloseHandle(g_hChildStd_IN_Rd);
     CloseHandle(g_hChildStd_OUT_Wr);
@@ -67,8 +70,8 @@ int main(int argc, char** argv)
     ResumeThread(pi.hThread);
     printf("Injected DLL successfully\n");
 
-    // Write "hello!\n" to child stdin
-    const char* input = "1\n2\n3\n4\n5\n6\n7\n"; // Example input for Tic Tac Toe
+    // Write simulated input to child stdin
+    const char* input = "1\n2\n3\n4\n5\n6\n7\n";
     DWORD bytesWritten;
     WriteFile(g_hChildStd_IN_Wr, input, (DWORD)strlen(input), &bytesWritten, NULL);
     CloseHandle(g_hChildStd_IN_Wr); // Signal EOF
@@ -102,6 +105,7 @@ int main(int argc, char** argv)
 
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
+    system("del /F output.log >nul 2>&1");
     return 0;
 }
 

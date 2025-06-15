@@ -15,30 +15,26 @@
 #include "CheckRemoteDebuggerPresentHooking.h"
 
 
-DWORD WINAPI DisableBufferingThread(LPVOID lpParam) {
-    FILE* f = NULL;
-    if (fopen_s(&f, "debug_dll_log.txt", "w") == 0 && f != NULL) {
-        fprintf(f, "DLL thread started\n");
-        fflush(f);
-        fclose(f);
-    }
-    else {
-        // Handle fopen_s failure if needed
-    }
 
-    Sleep(1000); // wait for stdout to initialize
-    setvbuf(stdout, NULL, _IONBF, 0);
+void set_being_debugged_flag()
+{
+    // PEB is pointed to by the FS:[0x30] segment register on 32-bit Windows
+    BYTE* pBeingDebugged = (BYTE*)__readfsbyte(0x30 + 2);
 
-    fprintf(stdout, "[DLL] stdout write from thread\n");
-    fflush(stdout);
+    // This is incorrect, need to get pointer first:
 
-    return 0;
+    // Get the PEB base address from FS:[0x30]
+    PBYTE pPEB = (PBYTE)__readfsdword(0x30);
+
+    // BeingDebugged is at offset 0x2 inside the PEB
+    pPEB[2] = 1;  // Set BeingDebugged to 1
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {
     if (reason == DLL_PROCESS_ATTACH) {
-        // CreateThread(NULL, 0, DisableBufferingThread, NULL, 0, NULL);
+        set_being_debugged_flag(); // make process think it is debugged
         setIsDebuggerPresentHook();
+        setCheckRemoteDebuggerPresentHook();
     }
     return TRUE;
 }

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "isDebuggerPresentHooking.h"
 
-BOOL WINAPI IsDebuggerPresentHook() {
+BOOL WINAPI isDebuggerPresentHook() {
     ExitProcess(5001);
     return FALSE; // never reached
 }
@@ -19,7 +19,7 @@ void setIsDebuggerPresentHook() {
 
     DWORD oldProtect;
     BYTE patch[5];
-    DWORD rel = (DWORD)((BYTE*)IsDebuggerPresentHook - ((BYTE*)func + 5));
+    DWORD rel = (DWORD)((BYTE*)isDebuggerPresentHook - ((BYTE*)func + 5));
 
     patch[0] = 0xE9; // JMP opcode
     memcpy(&patch[1], &rel, 4);

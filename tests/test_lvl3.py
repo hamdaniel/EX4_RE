@@ -61,7 +61,7 @@ def check_strings_section(exe_path, keywords):
                 found.add(keyword)
 
     if found:
-        print(f"\nLevel 3 failed. found suspicious string found: {', '.join(sorted(found))}\n")
+        print(f"\nLevel 3 failed. Found suspicious string found: {', '.join(sorted(found))}\n")
     else:
         print("\nLevel 3 passed!\n")
 

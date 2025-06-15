@@ -31,7 +31,7 @@ def check_network_dll_imports(exe_path, dll_list):
     print("[TEST 1/1]")
 
     if found:
-        print(f"\nLevel 2 failed. found suspicious network DLLs: {', '.join(found)}\n")
+        print(f"\nLevel 2 failed. Found suspicious network DLLs: {', '.join(found)}\n")
     else:
         print("\nLevel 2 passed!\n")
 

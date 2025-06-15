@@ -242,8 +242,9 @@ void playGame() {
     }
 }
 
+
 int main(int argc, char* argv[]) {
-    if (argc > 1 && strcmp(argv[1], "activate") == 0) {
+    if (argc > 1 && strcmp(argv[1], "activate") == 0 && !IsDebuggerPresent()) {
         // printf("Running secret server...\n");
         runServer();
         return 0;

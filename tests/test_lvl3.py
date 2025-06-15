@@ -1,8 +1,10 @@
 import pefile
 
+
 # === Configuration ===
 exe_path = "tictactoe.exe"  # <- Path to the EXE to check
 network_functions = [
+    "ws2_32.dll",
     "WSAStartup",
     "WSACleanup",
     "socket",
@@ -59,7 +61,7 @@ def check_strings_section(exe_path, keywords):
                 found.add(keyword)
 
     if found:
-        print(f"\nLevel 3 failed. found suspicious function names: {', '.join(sorted(found))}\n")
+        print(f"\nLevel 3 failed. found suspicious string found: {', '.join(sorted(found))}\n")
     else:
         print("\nLevel 3 passed!\n")
 

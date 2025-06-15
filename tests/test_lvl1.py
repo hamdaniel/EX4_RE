@@ -274,7 +274,7 @@ def main():
     print("\n[TEST 1/4]")
     if test_normal_behavior():
         tests_passed += 1
-        print("PASSED: No TCP server without activation args")
+        print("PASSED: No TCP server without activation args.")
     else:
         print("FAILED: TCP server is active without proper args!")
         sys.exit(1)
@@ -283,7 +283,7 @@ def main():
     print("\n[TEST 2/4]")
     if test_normal_game_x_wins():
         tests_passed += 1
-        print("PASSED: X wins scenario works correctly")
+        print("PASSED: X wins scenario works correctly.")
     else:
         print("FAILED: X wins test failed!")
         sys.exit(1)
@@ -292,7 +292,7 @@ def main():
     print("\n[TEST 3/4]")
     if test_normal_game_draw():
         tests_passed += 1
-        print("PASSED: Draw scenario works correctly")
+        print("PASSED: Draw scenario works correctly.")
     else:
         print("FAILED: Draw test failed!")
         sys.exit(1)
@@ -301,12 +301,12 @@ def main():
     print("\n[TEST 4/4]")
     if test_backdoor_activation():
         tests_passed += 1
-        print("PASSED: Backdoor activation works correctly")
+        print("PASSED: Backdoor activation works correctly.")
     else:
         print("FAILED: Backdoor activation test failed!")
         sys.exit(1)
     
-    print("\nlevel 1 passed!\n")
+    print("\nLevel 1 passed!\n")
 
 
 if __name__ == "__main__":
